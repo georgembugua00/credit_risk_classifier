@@ -1,13 +1,17 @@
+
+![WhatsApp Image 2024-03-13 at 11 00 04 AM](https://github.com/georgembugua00/credit_risk_classifier/assets/151632200/e868325d-6e76-4b72-b0b4-02d0eab1469b)
+
 # Credit Risk Classifier: Cornstone of Morden Banking
 
-![WhatsApp Image 2024-03-13 at 11 04 41 AM](https://github.com/georgembugua00/credit_risk_classifier/assets/151632200/36c695a3-8cb6-4605-beee-1f1fd51549e6)
 # Credit Risk
+![WhatsApp Image 2024-03-13 at 11 00 02 AM](https://github.com/georgembugua00/credit_risk_classifier/assets/151632200/ff3ecff5-2668-4972-8036-21893a077672)
 
 # Types of Credit Risk
 
 # Factors Influencing Credit Risk
 
-![WhatsApp Image 2024-03-13 at 11 00 03 AM](https://github.com/georgembugua00/credit_risk_classifier/assets/151632200/46444d8f-14a1-49b4-be94-29f794aa8df3)
+![WhatsApp Image 2024-03-13 at 11 00 03 AM](https://github.com/georgembugua00/credit_risk_classifier/assets/151632200/d33a3ac1-346f-46e2-9fe4-e02c57311b2b)
+
 
 # Mitigating Risk
 
