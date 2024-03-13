@@ -3,7 +3,7 @@
 
 # Credit Risk Classifier: Cornstone of Morden Banking
 
-# Credit Risk
+#  What is Credit Risk
 ![WhatsApp Image 2024-03-13 at 11 00 02 AM](https://github.com/georgembugua00/credit_risk_classifier/assets/151632200/ff3ecff5-2668-4972-8036-21893a077672)
 
 # Types of Credit Risk
