@@ -1,6 +1,3 @@
-
-![WhatsApp Image 2024-03-13 at 11 00 04 AM](https://github.com/georgembugua00/credit_risk_classifier/assets/151632200/e868325d-6e76-4b72-b0b4-02d0eab1469b)
-
 # Credit Risk Classifier: Cornstone of Morden Banking
 
 #  What is Credit Risk
