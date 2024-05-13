@@ -7,13 +7,7 @@
 
 ![WhatsApp Image 2024-03-13 at 11 00 03 AM](https://github.com/georgembugua00/credit_risk_classifier/assets/151632200/d33a3ac1-346f-46e2-9fe4-e02c57311b2b)
 
-
-# Mitigating Risk
-
-![WhatsApp Image 2024-03-13 at 11 00 03 AM (1)](https://github.com/georgembugua00/credit_risk_classifier/assets/151632200/80b43b93-eae4-4042-b1bf-f40b30246a04)
-
-
-## Business Understanding
+# Business Understanding
 
 Credit risk management is a vital component of the modern banking industry. Credit risk classifiers empower banks to make data-driven decisions and optimize financial performance. When effectively implemented, such models can contribute positively to a bank's Triple Bottom Line (TBL) by:
 
@@ -34,7 +28,8 @@ The objective is to implement a credit risk classification system that improves 
 
 Predicting loan default risk
 Recommending appropriate loan terms (optional, can be added based on model capabilities)
-## Data Understanding
+
+# Data Understanding
 
 The system will leverage the following borrower and loan data:
 
