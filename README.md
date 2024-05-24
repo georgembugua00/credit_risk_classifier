@@ -19,17 +19,15 @@ Financial stability through effective risk management, ensuring long-term sustai
 
 # Business Problem
 
-Banks seeks to expand its loan portfolio while maintaining a strong Triple Bottom Line. However, a rise in loan defaults and NPLs in 2023 necessitates a more precise and accurate credit risk prediction system.
+Banks seeks to expand its loan portfolio while maintaining a strong Triple Bottom Line. However, a more precise and accurate credit risk prediction system.
 
 # Main Objective
 
 The objective is to implement a credit risk classification system that improves loan approval decisions by:
-
-Predicting loan default risk
-Recommending appropriate loan terms (optional, can be added based on model capabilities)
+- Predicting loan default risk
+- Recommending appropriate loan terms (optional, can be added based on model capabilities)
 
 # Data Understanding
-
 The system will leverage the following borrower and loan data:
 
 **Personal Information:**
@@ -67,15 +65,13 @@ The system will leverage the following borrower and loan data:
 
 We addressed data quality issues to ensure the model's effectiveness:
 
-1.**Missing Values:** Handled missing values using appropriate techniques like imputation based on feature type and distribution analysis.
+1. **Outliers:** Identified and removed outliers that could significantly skew the model's learning process.
 
-2. **Outliers:** Identified and removed outliers that could significantly skew the model's learning process.
+2. **Feature Engineering:** Created new features (e.g., debt-to-income ratio) to enhance model performance.
 
-3. **Feature Engineering:** Created new features (e.g., debt-to-income ratio) to enhance model performance.
+3. **Feature Scaling:** Standardized features to ensure all features contribute equally during model training.
 
-4. **Feature Scaling:** Standardized features to ensure all features contribute equally during model training.
-
-5. **Categorical Encoding:** Converted categorical features (e.g., loan intent) into numerical representations suitable for model training.
+4. **Categorical Encoding:** Converted categorical features (e.g., loan intent) into numerical representations suitable for model training.
 
 # Exploratory Data Analysis (EDA)
 
@@ -90,11 +86,11 @@ We performed a comprehensive analysis to understand the data's distribution, ide
 
 ![output](https://github.com/georgembugua00/credit_risk_classifier/assets/151632200/73c10eb7-087d-41e0-b95b-2674c975017e)
 
-Modelling
+# Modelling
 
 ## Feature Selection: 
 
-Recursive Feature Elimination (RFE) was employed to identify the most relevant features for model training. 
+**Recursive Feature Elimination (RFE)** was employed to identify the most relevant features for model training. 
 RFE iteratively removes the least important feature based on a chosen estimator (e.g., DecisionTreeClassifier), resulting in a core set of features with the strongest predictive power for loan default risk.
 
 ## Machine Learning Algorithms: 
@@ -104,27 +100,19 @@ Logistic Regression serves as a well-established baseline model for classificati
 
 ## Hyperparameter Tuning: 
 
-GridSearchCV and RandomizedSearchCV were employed to optimize the performance of the chosen models. 
+- **GridSearchCV** and **RandomizedSearchCV** were employed to optimize the performance of the Random Forest Model. 
 GridSearchCV performs an exhaustive search over a defined hyperparameter grid, while RandomizedSearchCV samples randomly from the grid, making it more efficient for large parameter spaces. 
-Both techniques evaluate model performance using a scoring metric (e.g., precision) to identify the best hyperparameter combination for each model.
+- Both techniques evaluate model performance using a scoring metric (e.g., precision) to identify the best hyperparameter combination for each model.
+- However RandomizedSearchCV gave the best hyperparameters.
 
 ## Class Imbalance Mitigation: 
 
-The credit risk data exhibits class imbalance, where loan defaults (minority class) are significantly outnumbered by non-defaults (majority class). 
-This imbalance can lead to models prioritizing the majority class and performing poorly on defaults.
-To address this, we explored oversampling (creating duplicate minority class observations) and undersampling (removing majority class observations) techniques, acknowledging the potential trade-offs associated with each approach.
+- The credit risk data exhibits class imbalance, where loan defaults (minority class) are significantly outnumbered by non-defaults (majority class). This imbalance can lead to models prioritizing the majority class and performing poorly on defaults.
+- To address this, we explored oversampling (creating duplicate minority class observations) and undersampling (removing majority class observations) techniques, acknowledging the potential trade-offs associated with each approach.
 
-# Model Development and Evaluation
+# Model Evaluation
 
-We experimented with various machine learning algorithms to identify the best model for credit risk prediction. The key steps involved:
 
-- **Feature Selection:** Employed techniques like RFE (Recursive Feature Elimination) to identify the most relevant features for model training.
-
-- **Model Training and Tuning:** Trained and hyperparameter-tuned different models (e.g., Logistic Regression, Random Forest) using techniques like GridSearchCV and RandomizedSearchCV to optimize performance.
-
-- **Class Imbalance Handling:** Addressed class imbalance (unequal distribution of loan default vs. non-default cases) using techniques like oversampling or undersampling.
-
-- **Model Evaluation:** Evaluated model performance using various metrics like accuracy, precision, recall, F1-score, and ROC AUC score to assess the model's ability to correctly classify loan defaults.
 
 ## Results
 Random Forest with RandomizedSearchCV: The Random Forest model, tuned using RandomizedSearchCV, emerged as the best performer.
