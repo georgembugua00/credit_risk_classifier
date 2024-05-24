@@ -11,18 +11,21 @@
 
 Credit risk management is a vital component of the modern banking industry. Credit risk classifiers empower banks to make data-driven decisions and optimize financial performance. When effectively implemented, such models can contribute positively to a bank's Triple Bottom Line (TBL) by:
 
-People:
-Improved financial inclusion by identifying creditworthy borrowers, enabling expansion of the loan portfolio and reaching previously underserved populations.
-Community development by directing loans to individuals who can leverage them for growth, fostering a ripple effect within communities.
-Planet:
+### People:
+- Improved financial inclusion by identifying creditworthy borrowers, enabling expansion of the loan portfolio and reaching previously underserved populations.
+
+- Community development by directing loans to individuals who can leverage them for growth, fostering a ripple effect within communities.
+### Planet:
 Enhanced corporate social responsibility (CSR) initiatives through reduced losses from delinquent loans, allowing banks to allocate more resources to sustainability efforts.
-Profit:
+
+### Profit:
 Financial stability through effective risk management, ensuring long-term sustainability.
-## Business Problem
+
+# Business Problem
 
 Equity Bank seeks to expand its loan portfolio while maintaining a strong Triple Bottom Line. However, a rise in loan defaults and NPLs in 2023 necessitates a more precise and accurate credit risk prediction system.
 
-## Main Objective
+# Main Objective
 
 The objective is to implement a credit risk classification system that improves loan approval decisions by:
 
@@ -70,36 +73,36 @@ We addressed data quality issues to ensure the model's effectiveness:
 
 Missing Values: Handled missing values using appropriate techniques like imputation based on feature type and distribution analysis.
 
-**Outliers:** Identified and removed outliers that could significantly skew the model's learning process.
+1. **Outliers:** Identified and removed outliers that could significantly skew the model's learning process.
 
-**Feature Engineering:** Created new features (e.g., debt-to-income ratio) to enhance model performance.
+2. **Feature Engineering:** Created new features (e.g., debt-to-income ratio) to enhance model performance.
 
-**Feature Scaling:** Standardized features to ensure all features contribute equally during model training.
+3. **Feature Scaling:** Standardized features to ensure all features contribute equally during model training.
 
-**Categorical Encoding:** Converted categorical features (e.g., loan intent) into numerical representations suitable for model training.
+4. **Categorical Encoding:** Converted categorical features (e.g., loan intent) into numerical representations suitable for model training.
 
 # Exploratory Data Analysis (EDA)
 
 We performed a comprehensive analysis to understand the data's distribution, identify outliers, and explore relationships between features. Techniques used include:
 
-**Visualization:** Histograms, boxplots, scatterplots to visualize distributions and identify potential outliers.
+1. **Visualization:** Histograms, boxplots, scatterplots to visualize distributions and identify potential outliers.
 
-**Univariate Analysis:** Calculating summary statistics (mean, median, standard deviation) to understand central tendency and dispersion.
+2. **Univariate Analysis:** Calculating summary statistics (mean, median, standard deviation) to understand central tendency and dispersion.
 
-**Bi-variate Analysis:** Analyzing relationships between pairs of features (e.g., employment length vs. loan default) to identify potential predictors.
+3. **Bi-variate Analysis:** Analyzing relationships between pairs of features (e.g., employment length vs. loan default) to identify potential predictors.
 
 
 # Model Development and Evaluation
 
 We experimented with various machine learning algorithms to identify the best model for credit risk prediction. The key steps involved:
 
-**Feature Selection:** Employed techniques like RFE (Recursive Feature Elimination) to identify the most relevant features for model training.
+- **Feature Selection:** Employed techniques like RFE (Recursive Feature Elimination) to identify the most relevant features for model training.
 
-**Model Training and Tuning:** Trained and hyperparameter-tuned different models (e.g., Logistic Regression, Random Forest) using techniques like GridSearchCV and RandomizedSearchCV to optimize performance.
+- **Model Training and Tuning:** Trained and hyperparameter-tuned different models (e.g., Logistic Regression, Random Forest) using techniques like GridSearchCV and RandomizedSearchCV to optimize performance.
 
-**Class Imbalance Handling:** Addressed class imbalance (unequal distribution of loan default vs. non-default cases) using techniques like oversampling or undersampling.
+- **Class Imbalance Handling:** Addressed class imbalance (unequal distribution of loan default vs. non-default cases) using techniques like oversampling or undersampling.
 
-**Model Evaluation:** Evaluated model performance using various metrics like accuracy, precision, recall, F1-score, and ROC AUC score to assess the model's ability to correctly classify loan defaults.
+- **Model Evaluation:** Evaluated model performance using various metrics like accuracy, precision, recall, F1-score, and ROC AUC score to assess the model's ability to correctly classify loan defaults.
 
 ## Results
 
