@@ -64,17 +64,7 @@ The system will leverage the following borrower and loan data:
 
 - cb_person_cred_hist_length: Represents the length of the borrower's credit history (e.g., in years). A longer credit history allows for a more comprehensive assessment of repayment behavior.
 
-# Exploratory Data Analysis (EDA)
-
-We performed a comprehensive analysis to understand the data's distribution, identify outliers, and explore relationships between features. Techniques used include:
-
-**Visualization:** Histograms, boxplots, scatterplots to visualize distributions and identify potential outliers.
-
-**Univariate Analysis:** Calculating summary statistics (mean, median, standard deviation) to understand central tendency and dispersion.
-
-**Bi-variate Analysis:** Analyzing relationships between pairs of features (e.g., employment length vs. loan default) to identify potential predictors.
-
-## Data Preprocessing
+#Data Preprocessing
 
 We addressed data quality issues to ensure the model's effectiveness:
 
@@ -87,6 +77,17 @@ Missing Values: Handled missing values using appropriate techniques like imputat
 **Feature Scaling:** Standardized features to ensure all features contribute equally during model training.
 
 **Categorical Encoding:** Converted categorical features (e.g., loan intent) into numerical representations suitable for model training.
+
+# Exploratory Data Analysis (EDA)
+
+We performed a comprehensive analysis to understand the data's distribution, identify outliers, and explore relationships between features. Techniques used include:
+
+**Visualization:** Histograms, boxplots, scatterplots to visualize distributions and identify potential outliers.
+
+**Univariate Analysis:** Calculating summary statistics (mean, median, standard deviation) to understand central tendency and dispersion.
+
+**Bi-variate Analysis:** Analyzing relationships between pairs of features (e.g., employment length vs. loan default) to identify potential predictors.
+
 
 # Model Development and Evaluation
 
