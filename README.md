@@ -85,11 +85,17 @@ Missing Values: Handled missing values using appropriate techniques like imputat
 
 We performed a comprehensive analysis to understand the data's distribution, identify outliers, and explore relationships between features. Techniques used include:
 
-1. **Visualization:** Histograms, boxplots, scatterplots to visualize distributions and identify potential outliers.
+**Visualization:** Histograms, boxplots, scatterplots to visualize distributions and identify potential outliers.
 
-2. **Univariate Analysis:** Calculating summary statistics (mean, median, standard deviation) to understand central tendency and dispersion.
+1. **Univariate Analysis:** Calculating summary statistics (mean, median, standard deviation) to understand central tendency and dispersion.
+![uni](https://github.com/georgembugua00/credit_risk_classifier/assets/151632200/7f11b907-3345-4e13-9165-43b3d86497b4)
 
-3. **Bi-variate Analysis:** Analyzing relationships between pairs of features (e.g., employment length vs. loan default) to identify potential predictors.
+2. **Bi-variate Analysis:** Analyzing relationships between pairs of features (e.g., employment length vs. loan default) to identify potential predictors.
+
+![output](https://github.com/georgembugua00/credit_risk_classifier/assets/151632200/73c10eb7-087d-41e0-b95b-2674c975017e)
+
+Modelling
+
 
 
 # Model Development and Evaluation
