@@ -111,6 +111,56 @@ GridSearchCV performs an exhaustive search over a defined hyperparameter grid, w
 - To address this, we explored oversampling (creating duplicate minority class observations) and undersampling (removing majority class observations) techniques, acknowledging the potential trade-offs associated with each approach.
 
 # Model Evaluation
+## Logistic Regression Model Performance
+
+### Logistic Regression (Normal):
+
+Accuracy is decent (0.73), but this might be misleading due to the class imbalance.
+Precision for the majority class (0) is high (0.91), indicating the model correctly identifies most negative cases.
+Recall for the minority class (1) is lower (0.74), indicating the model misses some positive cases.
+F1-score for the minority class (0.54) is lower, reflecting the trade-off between precision and recall.
+
+### Undersampled Logistic Regression:
+
+Overall accuracy decreases (0.66) compared to the normal model.
+Precision and recall become more balanced between classes (around 0.66).
+This suggests the model might have been overfitting to the majority class in the normal model.
+
+### Oversampled Logistic Regression:
+Overall accuracy increases (0.72) compared to the normal model.
+Precision and recall improve for the minority class (around 0.7), but slightly decrease for the majority class.
+Oversampling might have helped the model learn the minority class better.
+
+# SVM Model Performance
+
+### Normal Model:
+Similar to the logistic regression case, the model favors the majority class (precision: 0.88, recall: 0.78).
+It misses some positive cases (minority class) as indicated by lower recall (0.61).
+
+### Undersampled Model:
+Precision for the minority class improves (0.76), but recall for the majority class decreases (0.80).
+This suggests the model might be overfitting to the minority class after undersampling.
+
+### Oversampled Model:
+Similar to the undersampled model, there's a trade-off between class performances.
+Precision for the minority class improves (0.74) compared to the normal model, but recall remains low (0.59) for the majority class.
+F1-score:
+F1-score considers both precision and recall, providing a balanced view.
+All models have lower F1-scores for the minority class (around 0.5-0.7), highlighting the challenge of correctly classifying the minority class.
+
+# Random Forest Model Performance
+Model Performance:
+
+The best model had a score of:
+
+Precision: 0.79 for both classes (approved and rejected loans)
+
+Recall: Around 0.76-0.79 for both classes
+
+F1-score: Around 0.77-0.78 for both classes
+
+Accuracy: 0.78 (overall proportion of correct predictions)
+
 
 
 
