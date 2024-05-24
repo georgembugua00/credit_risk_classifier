@@ -3,10 +3,6 @@
 #  What is Credit Risk
 ![WhatsApp Image 2024-03-13 at 11 00 02 AM](https://github.com/georgembugua00/credit_risk_classifier/assets/151632200/ff3ecff5-2668-4972-8036-21893a077672)
 
-# Factors Influencing Credit Risk
-
-![WhatsApp Image 2024-03-13 at 11 00 03 AM](https://github.com/georgembugua00/credit_risk_classifier/assets/151632200/d33a3ac1-346f-46e2-9fe4-e02c57311b2b)
-
 # Business Understanding
 
 Credit risk management is a vital component of the modern banking industry. Credit risk classifiers empower banks to make data-driven decisions and optimize financial performance. When effectively implemented, such models can contribute positively to a bank's Triple Bottom Line (TBL) by:
@@ -23,7 +19,7 @@ Financial stability through effective risk management, ensuring long-term sustai
 
 # Business Problem
 
-Equity Bank seeks to expand its loan portfolio while maintaining a strong Triple Bottom Line. However, a rise in loan defaults and NPLs in 2023 necessitates a more precise and accurate credit risk prediction system.
+Banks seeks to expand its loan portfolio while maintaining a strong Triple Bottom Line. However, a rise in loan defaults and NPLs in 2023 necessitates a more precise and accurate credit risk prediction system.
 
 # Main Objective
 
@@ -57,7 +53,7 @@ The system will leverage the following borrower and loan data:
 
 **Loan Status and Repayment History:**
 
-- loan_status: Likely indicates the current loan status (e.g., "current", "late", "charged_off"), reflecting the borrower's repayment behavior and ability to meet obligations.
+- loan_status: Likely indicates the current loan status reflecting the borrower's repayment behavior and ability to meet obligations.
 
 - loan_percent_income: Represents the loan amount as a percentage of the borrower's income. A high loan-to-income ratio indicates a larger financial burden, potentially increasing default risk.
 
@@ -67,19 +63,19 @@ The system will leverage the following borrower and loan data:
 
 - cb_person_cred_hist_length: Represents the length of the borrower's credit history (e.g., in years). A longer credit history allows for a more comprehensive assessment of repayment behavior.
 
-#Data Preprocessing
+# Data Preprocessing
 
 We addressed data quality issues to ensure the model's effectiveness:
 
-Missing Values: Handled missing values using appropriate techniques like imputation based on feature type and distribution analysis.
+1.**Missing Values:** Handled missing values using appropriate techniques like imputation based on feature type and distribution analysis.
 
-1. **Outliers:** Identified and removed outliers that could significantly skew the model's learning process.
+2. **Outliers:** Identified and removed outliers that could significantly skew the model's learning process.
 
-2. **Feature Engineering:** Created new features (e.g., debt-to-income ratio) to enhance model performance.
+3. **Feature Engineering:** Created new features (e.g., debt-to-income ratio) to enhance model performance.
 
-3. **Feature Scaling:** Standardized features to ensure all features contribute equally during model training.
+4. **Feature Scaling:** Standardized features to ensure all features contribute equally during model training.
 
-4. **Categorical Encoding:** Converted categorical features (e.g., loan intent) into numerical representations suitable for model training.
+5. **Categorical Encoding:** Converted categorical features (e.g., loan intent) into numerical representations suitable for model training.
 
 # Exploratory Data Analysis (EDA)
 
@@ -96,7 +92,27 @@ We performed a comprehensive analysis to understand the data's distribution, ide
 
 Modelling
 
+## Feature Selection: 
 
+Recursive Feature Elimination (RFE) was employed to identify the most relevant features for model training. 
+RFE iteratively removes the least important feature based on a chosen estimator (e.g., DecisionTreeClassifier), resulting in a core set of features with the strongest predictive power for loan default risk.
+
+## Machine Learning Algorithms: 
+
+We experimented with Logistic Regression and Random Forest algorithms. 
+Logistic Regression serves as a well-established baseline model for classification problems, while Random Forest is often effective for imbalanced datasets commonly encountered in credit risk assessment, where defaults are typically a minority class.
+
+## Hyperparameter Tuning: 
+
+GridSearchCV and RandomizedSearchCV were employed to optimize the performance of the chosen models. 
+GridSearchCV performs an exhaustive search over a defined hyperparameter grid, while RandomizedSearchCV samples randomly from the grid, making it more efficient for large parameter spaces. 
+Both techniques evaluate model performance using a scoring metric (e.g., precision) to identify the best hyperparameter combination for each model.
+
+## Class Imbalance Mitigation: 
+
+The credit risk data exhibits class imbalance, where loan defaults (minority class) are significantly outnumbered by non-defaults (majority class). 
+This imbalance can lead to models prioritizing the majority class and performing poorly on defaults.
+To address this, we explored oversampling (creating duplicate minority class observations) and undersampling (removing majority class observations) techniques, acknowledging the potential trade-offs associated with each approach.
 
 # Model Development and Evaluation
 
@@ -111,9 +127,5 @@ We experimented with various machine learning algorithms to identify the best mo
 - **Model Evaluation:** Evaluated model performance using various metrics like accuracy, precision, recall, F1-score, and ROC AUC score to assess the model's ability to correctly classify loan defaults.
 
 ## Results
-
-Our analysis identified a Random Forest model, tuned using Randomized Search CV, as the best performing model for credit risk prediction. The model achieved a high level of accuracy and precision in identifying potential loan defaults.
-
-# Deployment
-
-The final Random Forest model is saved as a serialized file for easy deployment into Equity Bank's loan approval process. The model can be integrated into the bank's existing infrastructure to provide real-time credit risk assessments for loan applications.
+Random Forest with RandomizedSearchCV: The Random Forest model, tuned using RandomizedSearchCV, emerged as the best performer.
+This can be attributed to its ability to handle non-linear relationships in the data, its robustness to outliers, and its effectiveness in imbalanced classification problems.
