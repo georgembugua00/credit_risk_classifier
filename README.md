@@ -63,3 +63,47 @@ The system will leverage the following borrower and loan data:
 - cb_person_default_on_file: Likely indicates whether the borrower has any past loan defaults recorded in their credit bureau report ("Yes", "No"). A history of defaults suggests a higher risk of future defaults.
 
 - cb_person_cred_hist_length: Represents the length of the borrower's credit history (e.g., in years). A longer credit history allows for a more comprehensive assessment of repayment behavior.
+
+# Exploratory Data Analysis (EDA)
+
+We performed a comprehensive analysis to understand the data's distribution, identify outliers, and explore relationships between features. Techniques used include:
+
+**Visualization:** Histograms, boxplots, scatterplots to visualize distributions and identify potential outliers.
+
+**Univariate Analysis:** Calculating summary statistics (mean, median, standard deviation) to understand central tendency and dispersion.
+
+**Bi-variate Analysis:** Analyzing relationships between pairs of features (e.g., employment length vs. loan default) to identify potential predictors.
+
+## Data Preprocessing
+
+We addressed data quality issues to ensure the model's effectiveness:
+
+Missing Values: Handled missing values using appropriate techniques like imputation based on feature type and distribution analysis.
+
+**Outliers:** Identified and removed outliers that could significantly skew the model's learning process.
+
+**Feature Engineering:** Created new features (e.g., debt-to-income ratio) to enhance model performance.
+
+**Feature Scaling:** Standardized features to ensure all features contribute equally during model training.
+
+**Categorical Encoding:** Converted categorical features (e.g., loan intent) into numerical representations suitable for model training.
+
+# Model Development and Evaluation
+
+We experimented with various machine learning algorithms to identify the best model for credit risk prediction. The key steps involved:
+
+**Feature Selection:** Employed techniques like RFE (Recursive Feature Elimination) to identify the most relevant features for model training.
+
+**Model Training and Tuning:** Trained and hyperparameter-tuned different models (e.g., Logistic Regression, Random Forest) using techniques like GridSearchCV and RandomizedSearchCV to optimize performance.
+
+**Class Imbalance Handling:** Addressed class imbalance (unequal distribution of loan default vs. non-default cases) using techniques like oversampling or undersampling.
+
+**Model Evaluation:** Evaluated model performance using various metrics like accuracy, precision, recall, F1-score, and ROC AUC score to assess the model's ability to correctly classify loan defaults.
+
+## Results
+
+Our analysis identified a Random Forest model, tuned using Randomized Search CV, as the best performing model for credit risk prediction. The model achieved a high level of accuracy and precision in identifying potential loan defaults.
+
+# Deployment
+
+The final Random Forest model is saved as a serialized file for easy deployment into Equity Bank's loan approval process. The model can be integrated into the bank's existing infrastructure to provide real-time credit risk assessments for loan applications.
